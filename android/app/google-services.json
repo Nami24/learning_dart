@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "968401799201",
+    "project_id": "learningdart-d889c",
+    "storage_bucket": "learningdart-d889c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968401799201:android:4f63c22a498f4004abfb60",
+        "android_client_info": {
+          "package_name": "com.example.learningdart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968401799201-sm0d5ucjrfr3bo16f9e3evgt53c6hh6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnBu7lc1bxbMQmXExwDiNHHF5_jsB7E6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968401799201-sm0d5ucjrfr3bo16f9e3evgt53c6hh6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
