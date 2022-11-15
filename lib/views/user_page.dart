@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'list_view.dart';
 
 class UserpageView extends StatelessWidget {
@@ -12,9 +11,21 @@ class UserpageView extends StatelessWidget {
        appBar: AppBar(
         title: const Text('Demo'),
       ),
-      body: const Center(
-        child: Text('hello'),
-        ),
+      body: Column(
+          children: [
+             Image.network(user.urlAvatar,
+            height: 300,
+            width: double.infinity,
+            fit: BoxFit.cover),
+            const SizedBox(height: 16,),
+            Text(user.username,
+            style: const TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+            ),
+            ),
+          ]
+          ),
     );
   }
 }

@@ -1,9 +1,13 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:learningdart/views/app_bar.dart';
 import 'package:learningdart/views/font_view.dart';
 import 'package:learningdart/views/list_view.dart';
+import 'package:learningdart/views/pop_alert.dart';
+import 'package:learningdart/views/stack_view.dart';
 import 'views/buttons_view.dart';
+import 'views/navigation_bar.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
@@ -72,6 +76,66 @@ class MainDrawer extends StatelessWidget {
                   MaterialPageRoute(
                   builder: (context) => 
                   const FontView()
+                  ),
+                  ),
+      ),
+      ListTile(
+         leading: const Icon(Icons.add_box),
+              title: const Text('Pop/Alert',
+              style: TextStyle(
+                fontSize: 18.0,
+                ),
+                ),
+                onTap: () => 
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                  builder: (context) => 
+                  const PopAlertPage()
+                  ),
+                  ),
+      ),
+       ListTile(
+         leading: const Icon(Icons.navigation),
+              title: const Text('Bottom Navigation',
+              style: TextStyle(
+                fontSize: 18.0,
+                ),
+                ),
+                onTap: () => 
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                  builder: (context) => 
+                  const NavigateBar()
+                  ),
+                  ),
+      ),
+      ListTile(
+         leading: const Icon(Icons.app_registration),
+              title: const Text('App Bar',
+              style: TextStyle(
+                fontSize: 18.0,
+                ),
+                ),
+                onTap: () => 
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                  builder: (context) => 
+                  const Appbar()
+                  ),
+                  ),
+      ),
+       ListTile(
+         leading: const Icon(Icons.stacked_bar_chart),
+              title: const Text('Stack View',
+              style: TextStyle(
+                fontSize: 18.0,
+                ),
+                ),
+                onTap: () => 
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                  builder: (context) => 
+                  const StackView()
                   ),
                   ),
       ),

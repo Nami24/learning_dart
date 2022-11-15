@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 // const age = 27;
 // const twiceAge = age * 2;
 
@@ -406,33 +404,7 @@ import 'package:flutter/material.dart';
 
 // }
 
-class Practise extends StatelessWidget {
-  const Practise({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello!'),
-        backgroundColor: Colors.red,
-        centerTitle: true,
-      ),
-      
-      body: const Center(
-        child: Text(
-          'Hello Mimi',
-          style: TextStyle(
-          fontSize: 20.0,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 2.0,
-          color: Colors.grey,
-          fontFamily: 'IndieFlower',
-        ),
-        ),
-      ),
-    );
-  }
-}  
 
 
 
