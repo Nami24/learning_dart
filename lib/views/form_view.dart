@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Screens/detail_screen.dart';
+import 'package:learningdart/views/form_view.dart';
+
+enum ProductTypeEnum{Downloadable, Deliverable}
 
 class FormView extends StatefulWidget {
   const FormView({super.key});
@@ -16,6 +19,7 @@ class _FormViewState extends State<FormView> {
   final _aboutController = TextEditingController();
   bool?  _listTileCheckBox = false;
   // bool?  _checkBox = false;
+  ProductTypeEnum? _productTypeEnum;
 
   @override
   void dispose() {
@@ -30,6 +34,7 @@ class _FormViewState extends State<FormView> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Form'),
@@ -63,7 +68,39 @@ class _FormViewState extends State<FormView> {
             const SizedBox(
               height: 20.0,
             ),
-            // Checkbox(
+            
+            Row(
+              children: [
+                Expanded(
+                  child: RadioListTile<ProductTypeEnum>(
+                    contentPadding: EdgeInsets.all(0.0),
+                    value: ProductTypeEnum.Deliverable, 
+                    groupValue: _productTypeEnum, 
+                    dense: true,
+                    title: Text("Femle"),
+                    onChanged: (val) {
+                      setState(() {
+                        _productTypeEnum = val;
+                      });
+                    }),
+                ),
+                const SizedBox(width: 5.0,),
+                Expanded(
+                  child: RadioListTile<ProductTypeEnum>(
+                    contentPadding: EdgeInsets.all(0.0),
+                    value: ProductTypeEnum.Downloadable, 
+                    groupValue: _productTypeEnum, 
+                    dense: true,
+                    title: Text("Male"), 
+                    onChanged: (val) {
+                      setState(() {
+                        _productTypeEnum = val;
+                      });
+                    }),
+                ),
+              ],
+            ),
+             // Checkbox(
             //   checkColor: Colors.white,
             //   activeColor: Colors.purple,
             //   tristate: true,
@@ -74,7 +111,7 @@ class _FormViewState extends State<FormView> {
             //   });
             // },
             // ),
-
+            
             CheckboxListTile(
               value: _listTileCheckBox,
               title: const Text("I agree."), 
@@ -86,9 +123,8 @@ class _FormViewState extends State<FormView> {
             controlAffinity: ListTileControlAffinity.leading,
             ),
             const SizedBox(
-              height: 20.0,
+              height: 10.0,
             ),
-
             myBtn(context),
           ],
         ),
@@ -104,7 +140,7 @@ class _FormViewState extends State<FormView> {
         context,
         MaterialPageRoute(builder: (context) {
           return DetailScreen(fullName: _nameController.text, about: _aboutController.text,);
-        }),
+        },),
          );
     },
     child: Text("Submit Form".toUpperCase(),
@@ -112,4 +148,5 @@ class _FormViewState extends State<FormView> {
   );
 }
 }
+
 
