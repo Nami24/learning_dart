@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:learningdart/views/app_bar.dart';
 import 'package:learningdart/views/font_view.dart';

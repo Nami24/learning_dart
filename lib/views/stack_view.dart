@@ -36,7 +36,7 @@ class StackView extends StatelessWidget {
           ),
 
           child: Stack(
-            children: [ 
+            children: [
             Positioned(
               top: 10,
               child: Text("Project Shifa",

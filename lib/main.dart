@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learningdart/practise.dart';
+import 'package:learningdart/Utils/theme_colors.dart';
+import 'package:learningdart/spalsh_screen.dart';
 import 'main_drawer.dart';
 
 void main() {
@@ -14,10 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
+      theme: ThemeColor.lightTheme,
+      darkTheme: ThemeColor.darkTheme,
+      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.system,
+      home: SplashScreen(),
     );
   }
 }
@@ -29,12 +32,26 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         title: const Text('Demo'),
       ),
-      body: const Center(
-        child: Text('My Demo'),
+      body: Center(
+        child: 
+        Padding(
+          padding: const EdgeInsets.all(50.0),
+          child: Column(
+            children: [
+              Text('My Demo', style: Theme.of(context).textTheme.headline5,),
+              Text("Let'Go", style: Theme.of(context).textTheme.subtitle2,),
+            ],
+          ),
+        ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: const Icon(Icons.add),
+        ),
       drawer: const MainDrawer(),
     );
   
