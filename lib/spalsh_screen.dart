@@ -1,35 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Screens/welcome_screen.dart';
+import 'package:learningdart/Utils/theme_colors.dart';
 
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 2400),
+          const Positioned(
             child: Padding(
               padding: EdgeInsets.only(top: 150),
-              child: const Image(
+              child: Image(
                   image: AssetImage("assets/images/splash_image.jpg"),
                         ),
               ),
             ), 
-         
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 1600),
+         Positioned(
             top: 50,
             left: 25,
               child: Column(

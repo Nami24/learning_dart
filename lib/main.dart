@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Utils/theme_colors.dart';
-import 'package:learningdart/spalsh_screen.dart';
+// import 'package:learningdart/spalsh_screen.dart';
 import 'main_drawer.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       // themeMode: ThemeMode.light,
       // themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      home: const HomePage(),
     );
   }
 }
