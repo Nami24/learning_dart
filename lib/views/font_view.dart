@@ -14,8 +14,9 @@ class FontView extends StatelessWidget {
       
       body: Center(
         child: Column(
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Text(
+            const Text(
               'Hello Mimi',
               style: TextStyle(
               fontSize: 20.0,
@@ -25,7 +26,7 @@ class FontView extends StatelessWidget {
               fontFamily: 'IndieFlower',
             ),
             ),
-            Text(
+            const Text(
               'Hello COCO',
               style: TextStyle(
               fontSize: 20.0,

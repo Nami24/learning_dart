@@ -10,17 +10,17 @@ class Appbar extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {}, 
-          icon: Icon(Icons.menu,),
+          icon: const Icon(Icons.menu,),
           ),
-        title: Text('Home'),
+        title: const Text('Home'),
          actions: [
           IconButton(
           onPressed: () {}, 
-          icon: Icon(Icons.shopping_bag,),
+          icon: const Icon(Icons.shopping_bag,),
           ),
           IconButton(
           onPressed: () {}, 
-          icon: Icon(Icons.search,),
+          icon: const Icon(Icons.search,),
           ),
          ],
          elevation: 10,
@@ -33,9 +33,10 @@ class Appbar extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Text("App Bar Screen", style: TextStyle(fontSize: 20.0),),
-            Text("Welcome", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),),
+            const Text("App Bar Screen", style: TextStyle(fontSize: 20.0),),
+            const Text("Welcome", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),),
           ],
         ),
       ),

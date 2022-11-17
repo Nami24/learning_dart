@@ -25,6 +25,7 @@ class _NavigateBarState extends State<NavigateBar> {
       super.dispose();
     }
 
+  // ignore: non_constant_identifier_names
   void navigationTapped(int Page) {
     pageController.jumpToPage(Page);
   }
@@ -42,10 +43,10 @@ class _NavigateBarState extends State<NavigateBar> {
         title: const Text('Bottom Navigation'), 
       ),  
       body: PageView(
-        children: homeScreenItems,
         physics:  const NeverScrollableScrollPhysics(),
         controller: pageController,
         onPageChanged: onPageChanged,
+        children: homeScreenItems,
       ),
       bottomNavigationBar: CupertinoTabBar(
         backgroundColor: mobileBackgroundColor,

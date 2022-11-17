@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learningdart/Utils/colors.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -14,9 +13,9 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
-        child: const Text('Search'),
+        child: Text('Search'),
       ),
     );
   }

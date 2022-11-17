@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:learningdart/Screens/welcome_screen.dart';
-import 'package:learningdart/Utils/theme_colors.dart';
 
 
 class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

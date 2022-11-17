@@ -37,6 +37,7 @@ class PopAlertPage extends StatelessWidget {
 }
 
 
+// ignore: non_constant_identifier_names
 void Login_page (BuildContext context) {
   var popup = const AlertDialog(
     title: Center(child: Text('Login Successfully')),

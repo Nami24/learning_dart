@@ -1,6 +1,7 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:learningdart/Screens/detail_screen.dart';
-import 'package:learningdart/views/form_view.dart';
 
 enum ProductTypeEnum{Downloadable, Deliverable}
 
@@ -12,9 +13,6 @@ class FormView extends StatefulWidget {
 }
 
 class _FormViewState extends State<FormView> {
-
-  var _fullName;
-  var _aboutName;
   final _nameController = TextEditingController();
   final _aboutController = TextEditingController();
   bool?  _listTileCheckBox = false;
@@ -28,10 +26,6 @@ class _FormViewState extends State<FormView> {
     super.dispose();
   }
  
-  void _updateText(val) {
-
-  }
-
   @override
   Widget build(BuildContext context) {
 
@@ -73,11 +67,11 @@ class _FormViewState extends State<FormView> {
               children: [
                 Expanded(
                   child: RadioListTile<ProductTypeEnum>(
-                    contentPadding: EdgeInsets.all(0.0),
+                    contentPadding: const EdgeInsets.all(0.0),
                     value: ProductTypeEnum.Deliverable, 
                     groupValue: _productTypeEnum, 
                     dense: true,
-                    title: Text("Femle"),
+                    title: const Text("Femle"),
                     onChanged: (val) {
                       setState(() {
                         _productTypeEnum = val;
@@ -87,11 +81,11 @@ class _FormViewState extends State<FormView> {
                 const SizedBox(width: 5.0,),
                 Expanded(
                   child: RadioListTile<ProductTypeEnum>(
-                    contentPadding: EdgeInsets.all(0.0),
+                    contentPadding: const EdgeInsets.all(0.0),
                     value: ProductTypeEnum.Downloadable, 
                     groupValue: _productTypeEnum, 
                     dense: true,
-                    title: Text("Male"), 
+                    title: const Text("Male"), 
                     onChanged: (val) {
                       setState(() {
                         _productTypeEnum = val;

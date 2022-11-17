@@ -44,7 +44,7 @@ class MainDrawer extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                   builder: (context) => 
-                  ListsViewPage(title: Text('Lists')),
+                  const ListsViewPage(title: Text('Lists')),
                   ),
                   ),
       ),

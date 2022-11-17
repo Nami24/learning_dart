@@ -53,7 +53,7 @@ class ButtonsScreen extends StatelessWidget {
           FloatingActionButton(
           onPressed: () {},
           backgroundColor: Colors.amber,
-          child: Text('Click'),
+          child: const Text('Click'),
           ),
         ],
     ),
