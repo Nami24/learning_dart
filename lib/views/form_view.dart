@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:learningdart/Screens/detail_screen.dart';
+import 'package:learningdart/Responsive/detail_screen.dart';
 
 enum ProductTypeEnum{Downloadable, Deliverable}
 
