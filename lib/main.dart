@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Utils/theme_colors.dart';
-// import 'package:learningdart/spalsh_screen.dart';
+import 'package:learningdart/spalsh_screen.dart';
 import 'main_drawer.dart';
 
 
@@ -55,7 +55,6 @@ class HomePage extends StatelessWidget {
         ),
       drawer: const MainDrawer(),
     );
-  
   }
 }
 

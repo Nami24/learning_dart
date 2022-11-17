@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learningdart/spalsh_screen.dart';
 import 'package:learningdart/views/app_bar.dart';
 import 'package:learningdart/views/font_view.dart';
 import 'package:learningdart/views/form_view.dart';
@@ -150,6 +151,21 @@ class MainDrawer extends StatelessWidget {
                   MaterialPageRoute(
                   builder: (context) => 
                   const FormView()
+                  ),
+                  ),
+      ),
+      ListTile(
+         leading: const Icon(Icons.animation),
+              title: const Text('Spalsh Screen',
+              style: TextStyle(
+                fontSize: 18.0,
+                ),
+                ),
+                onTap: () => 
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                  builder: (context) => 
+                  const SplashScreen()
                   ),
                   ),
       ),
