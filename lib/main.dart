@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Utils/theme_colors.dart';
-import 'package:learningdart/spalsh_screen.dart';
 import 'main_drawer.dart';
 
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeColor.lightTheme,
       darkTheme: ThemeColor.darkTheme,
       themeMode: ThemeMode.light,
-      // themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.dark,
       // themeMode: ThemeMode.system,
       home: const HomePage(),
     );
