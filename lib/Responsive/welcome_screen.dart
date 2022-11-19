@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:learningdart/Responsive/Login_screen.dart';
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
+
+  @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,10 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Flexible(
                     child: OutlinedButton(
-                    onPressed: () {}, 
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()),
+                      );
+                    },
                     style: OutlinedButton.styleFrom(
                       shape: const RoundedRectangleBorder(),
                       foregroundColor: const Color(0xff272727),
@@ -45,7 +55,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   Flexible(
                     child: ElevatedButton(
-                    onPressed: () {}, 
+                    onPressed: () {},
                      style: OutlinedButton.styleFrom(
                       elevation: 0,
                       shape: const RoundedRectangleBorder(),
@@ -66,4 +76,6 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
