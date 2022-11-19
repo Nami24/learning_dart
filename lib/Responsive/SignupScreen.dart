@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,24 +13,20 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LoginHeader(size: size),
-              const LoginForm(),
-              const LoginFooter(),
-             
+              SignupHeader(size: size),
+              const SignupForm(),
+              const SignupFooter(),
             ],
-          ),
-        ),
-        ),
+          )
+        )),
     );
   }
 }
 
-
-
 // Header
 
-class LoginHeader extends StatelessWidget {
-  const LoginHeader({
+class SignupHeader extends StatelessWidget {
+  const SignupHeader({
     Key? key,
     required this.size,
   }) : super(key: key);
@@ -44,8 +40,8 @@ class LoginHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset("assets/images/img3.jpg", height: size.height *0.3),
-          Text('Welcome Back,', style: Theme.of(context).textTheme.headline1,),
-          Text('Explore In Your Own Way', style: Theme.of(context).textTheme.headline4,),
+          Text('Hello Friends,,', style: Theme.of(context).textTheme.headline1,),
+          Text('Create Your Profile', style: Theme.of(context).textTheme.headline4,),
           const SizedBox(height: 10,)
         ],
       ),
@@ -55,8 +51,8 @@ class LoginHeader extends StatelessWidget {
 
 // Main Form
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({
+class SignupForm extends StatelessWidget {
+  const SignupForm({
     Key? key,
   }) : super(key: key);
 
@@ -71,8 +67,26 @@ class LoginForm extends StatelessWidget {
             TextFormField(
               decoration: const InputDecoration(
                 prefixIcon: Icon(Icons.person_outline_outlined),
+                labelText: 'Full Name',
+                hintText: 'Full Name',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 30.0 -20,),
+            TextFormField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.email_outlined),
                 labelText: 'E-Mail',
                 hintText: 'E-Mail',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 30.0 -20,),
+            TextFormField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.phone),
+                labelText: 'Mobile No.',
+                hintText: 'Mobile No.',
                 border: OutlineInputBorder(),
               ),
             ),
@@ -88,20 +102,15 @@ class LoginForm extends StatelessWidget {
                  ),
               ),
             ),
-            const SizedBox(height: 30.0 -20,),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(onPressed: () {}, 
-              child: const Text('Forget Password?')),
-            ),
-            const SizedBox(height: 30.0 -20,),
+            const SizedBox(height: 50.0 -20,),
             Center(
               child: SizedBox(
                 width: double.infinity,
                 height: 50.0,
                 child: ElevatedButton(
                   onPressed: () {}, 
-                  child: Text('Login'.toUpperCase()),
+                  child: Text('Signup'.toUpperCase(),
+                  ),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.black),
                   ),
@@ -116,8 +125,8 @@ class LoginForm extends StatelessWidget {
 
 // Footer
 
-class LoginFooter extends StatelessWidget {
-  const LoginFooter({
+class SignupFooter extends StatelessWidget {
+  const SignupFooter({
     Key? key,
   }) : super(key: key);
 
@@ -143,11 +152,11 @@ class LoginFooter extends StatelessWidget {
           onPressed: () {}, 
           child: const Text.rich(
             TextSpan(
-              text: "Don't have an account?",
+              text: "Already have an account?",
               style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.normal, color: Colors.black, fontFamily: 'poppins'),
               children: [
                 TextSpan(
-                  text: " Signup",
+                  text: " Login",
                   style: TextStyle(color: Colors.blue),
                 ),
               ],

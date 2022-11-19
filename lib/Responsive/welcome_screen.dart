@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Responsive/Login_screen.dart';
+import 'package:learningdart/Responsive/SignupScreen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -37,33 +38,36 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Flexible(
                     child: OutlinedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()),
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()),
                       );
                     },
                     style: OutlinedButton.styleFrom(
-                      shape: const RoundedRectangleBorder(),
-                      foregroundColor: const Color(0xff272727),
-                      side: const BorderSide(color: Color(0xff272727),
-                      ),
-                      padding: const EdgeInsets.only(top:15.0, left: 30, right: 30, bottom: 15.0)
+                    shape: const RoundedRectangleBorder(),
+                    foregroundColor: const Color(0xff272727),
+                    side: const BorderSide(color: Color(0xff272727),
+                    ),
+                    padding: const EdgeInsets.only(top:15.0, left: 30, right: 30, bottom: 15.0)
                     ),
                     child: Text('Login'.toUpperCase()),
                     ),
                   ),
-                  const SizedBox(
+                    const SizedBox(
                       width: 10.0,
                     ),
                   Flexible(
                     child: ElevatedButton(
-                    onPressed: () {},
-                     style: OutlinedButton.styleFrom(
-                      elevation: 0,
-                      shape: const RoundedRectangleBorder(),
-                      backgroundColor: const Color(0xff272727),
-                      foregroundColor: const Color(0xffffffff),
-                      side: const BorderSide(color: Color(0xff272727),
-                      ),
-                      padding: const EdgeInsets.only(top:15.0, left: 30, right: 30, bottom: 15.0)
+                    onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen()),
+                      );
+                    },
+                    style: OutlinedButton.styleFrom(
+                    elevation: 0,
+                    shape: const RoundedRectangleBorder(),
+                    backgroundColor: const Color(0xff272727),
+                    foregroundColor: const Color(0xffffffff),
+                    side: const BorderSide(color: Color(0xff272727),
+                    ),
+                    padding: const EdgeInsets.only(top:15.0, left: 30, right: 30, bottom: 15.0)
                     ), 
                     child: Text("Signup".toUpperCase()),
                     ),
