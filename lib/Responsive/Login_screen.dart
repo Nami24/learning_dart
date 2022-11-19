@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learningdart/Responsive/forgetpassword_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -46,7 +47,7 @@ class LoginHeader extends StatelessWidget {
           Image.asset("assets/images/img3.jpg", height: size.height *0.3),
           Text('Welcome Back,', style: Theme.of(context).textTheme.headline1,),
           Text('Explore In Your Own Way', style: Theme.of(context).textTheme.headline4,),
-          const SizedBox(height: 10,)
+          const SizedBox(height: 10,),
         ],
       ),
     );
@@ -89,11 +90,50 @@ class LoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30.0 -20,),
+
+            // Forget Button
+
             Align(
               alignment: Alignment.centerRight,
-              child: TextButton(onPressed: () {}, 
+              child: TextButton(onPressed: () {
+                showModalBottomSheet(
+                  context: context, 
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  builder: (context) => Container(
+                    padding: const EdgeInsets.all(30.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Make Selection!', style: Theme.of(context).textTheme.headline2),
+                        Text('Select one of the options given below to reset your password', style: Theme.of(context).textTheme.bodyText2),
+                        const SizedBox(height: 30.0,),
+                        ForgetpasswordScreen(
+                          onTap: (){},
+                          title: 'E-mail',
+                          btnIcon: Icons.mail_outline_rounded, 
+                          subTitle: 'Reset via E-mail Verification',
+                        ),
+                        const SizedBox(height: 30.0,),
+                        ForgetpasswordScreen(
+                          onTap: (){},
+                          title: 'Mobile No.',
+                          btnIcon: Icons.mobile_friendly_rounded, 
+                          subTitle: 'Reset via Phone Verification',
+                        ),
+                        const SizedBox(height: 20.0,),
+
+                      ],
+                    ),
+                  )
+                );
+              }, 
               child: const Text('Forget Password?')),
             ),
+
+            //Login Button
+
             const SizedBox(height: 30.0 -20,),
             Center(
               child: SizedBox(
@@ -113,6 +153,9 @@ class LoginForm extends StatelessWidget {
       ));
   }
 }
+
+
+
 
 // Footer
 
