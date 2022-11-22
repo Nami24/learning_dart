@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learningdart/Responsive/Forget%20Password/otp_screen.dart';
 
 class ForgetPasswordMailScreen extends StatelessWidget {
   const ForgetPasswordMailScreen({super.key});
@@ -33,7 +34,10 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                     width: 100.0,
                     height: 30.0,
                     child: ElevatedButton(
-                      onPressed: () {}, 
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const OtpScreen())
+                        );                      
+                        },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(Colors.black),
                         ),
