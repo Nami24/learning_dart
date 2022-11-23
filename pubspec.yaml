@@ -73,6 +73,11 @@ flutter:
     - assets/images/img3.jpg
     - assets/images/google.png
     - assets/images/forgot-password.png
+    - assets/images/user.png
+    - assets/images/bookmark.png
+    - assets/images/android-logo.png
+    - assets/images/android.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
