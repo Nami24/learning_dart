@@ -77,6 +77,7 @@ flutter:
     - assets/images/bookmark.png
     - assets/images/android-logo.png
     - assets/images/android.png
+    - assets/images/img4.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
