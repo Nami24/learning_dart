@@ -12,6 +12,7 @@ class ThemeColor {
           headline4: GoogleFonts.poppins(fontSize: 14.0, color: Colors.black,fontWeight: FontWeight.bold),
           headline5: GoogleFonts.montserrat(color: Colors.black,fontWeight: FontWeight.bold,),
           headline6: GoogleFonts.montserrat(color: Colors.black,fontWeight: FontWeight.bold,),
+          subtitle1: GoogleFonts.poppins(color: Colors.black87, fontWeight: FontWeight.bold,),
           subtitle2: GoogleFonts.poppins(color: Colors.black87,),
           bodyText1: GoogleFonts.poppins(fontSize: 14.0, fontWeight: FontWeight.normal, color: Colors.black,),
           bodyText2: GoogleFonts.poppins(fontSize: 14.0, fontWeight: FontWeight.normal, color: Colors.black),

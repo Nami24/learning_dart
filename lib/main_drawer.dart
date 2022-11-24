@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/spalsh_screen.dart';
 import 'package:learningdart/views/app_bar.dart';
-import 'package:learningdart/views/dashboard_view.dart';
+import 'package:learningdart/Responsive/Dashbord%20Screen/dashboard_view.dart';
 import 'package:learningdart/views/font_view.dart';
 import 'package:learningdart/views/form_view.dart';
 import 'package:learningdart/views/list_view.dart';
