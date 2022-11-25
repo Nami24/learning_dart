@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learningdart/Responsive/welcome_screen.dart';
 
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

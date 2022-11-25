@@ -6,6 +6,7 @@ import 'package:learningdart/views/font_view.dart';
 import 'package:learningdart/views/form_view.dart';
 import 'package:learningdart/views/list_view.dart';
 import 'package:learningdart/views/pop_alert.dart';
+import 'package:learningdart/Responsive/Profile%20Screen/profile_screen.dart';
 import 'package:learningdart/views/stack_view.dart';
 import 'views/buttons_view.dart';
 import 'views/navigation_bar.dart';
@@ -182,6 +183,21 @@ class MainDrawer extends StatelessWidget {
             MaterialPageRoute(
                 builder: (context) => 
                 const DashboardView()
+                  ),
+                  ),
+      ),
+       ListTile(
+        leading: const Icon(Icons.person_add),
+        title: const Text('Profile',
+        style: TextStyle(
+            fontSize: 18.0,
+            ),
+            ),
+        onTap: () => 
+          Navigator.of(context).push(
+            MaterialPageRoute(
+                builder: (context) => 
+                const ProfileScreen()
                   ),
                   ),
       ),

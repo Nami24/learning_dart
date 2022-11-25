@@ -16,13 +16,13 @@ class DashboardAppbar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       centerTitle: true,
       leading: const Icon(
-        Icons.menu,
+        Icons.arrow_back,
         color: Colors.black,
       ),
       elevation: 0,
       actions: [
         Container(
-          margin: const EdgeInsets.only(right: 20),
+          margin: const EdgeInsets.all(20),
           child: IconButton(
             onPressed: () {},
             icon: const Icon(
